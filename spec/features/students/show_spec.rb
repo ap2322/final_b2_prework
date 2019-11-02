@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'on the student show page /students/studentid' do
   describe 'as a user' do
     before(:each) do
-      @student = create(:student, :with_courses, cs_count: 3, name: "Wiz Kid")
+      @student = create(:student, :with_course_students, cs_count: 3, name: "Wiz Kid")
       @courses = @student.courses
     end
 
