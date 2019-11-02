@@ -7,7 +7,7 @@ describe 'on the student show page /students/studentid' do
       @courses = @student.courses
     end
 
-    after(:each) do
+    after(:all) do
       CourseStudent.all.delete_all
       Course.all.delete_all
       Student.all.delete_all

@@ -1,0 +1,10 @@
+<h1><%= @course.course_name %></h1>
+
+<h2>Students</h2>
+<ol>
+  <% @course.students_grades_descending.each do |student| %>
+    <li id = "student-<%=student.id%>">
+      <%= student.name %>, <%= @course.student_grade(student.id) %>
+    </li>
+  <% end %>
+</ol>
