@@ -7,4 +7,8 @@ class Course < ApplicationRecord
   def student_grade(student_id)
     course_students.find_by(student_id: student_id).grade
   end
+
+  def students_grades_descending
+    students.joins(:course_students).order('course_students.grade desc')
+  end
 end
